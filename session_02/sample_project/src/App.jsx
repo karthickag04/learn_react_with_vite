@@ -8,6 +8,8 @@ import FormHandlingExample from './FormHandlingExample.jsx';
 import UseEffectExample from './UseEffectExample.jsx';
 import StylingApproachesExample from './StylingApproachesExample.jsx';
 import StyleUsageExample from './StyleUsageExample.jsx';
+import CreateElementExample from './CreateElementExample.jsx';
+import FragmentExample from './FragmentExample.jsx';
 
 function App() {
   return (
@@ -55,6 +57,14 @@ function App() {
       <h2>Styling Sessions</h2>
       <StylingApproachesExample />
       <StyleUsageExample />
+
+  <hr />
+  <h2>React.createElement (no JSX)</h2>
+  <CreateElementExample />
+
+  <hr />
+  <h2>Fragments</h2>
+  <FragmentExample />
     </div>
   );
 }
