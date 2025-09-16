@@ -5,7 +5,6 @@ import IfElseExample from './IfElseExample.jsx';
 import ImageExample from './ImageExample.jsx';
 import EventHandlingExample from './EventHandlingExample.jsx';
 import FormHandlingExample from './FormHandlingExample.jsx';
-import UseEffectExample from './UseEffectExample.jsx';
 import StylingApproachesExample from './StylingApproachesExample.jsx';
 import StyleUsageExample from './StyleUsageExample.jsx';
 import CreateElementExample from './CreateElementExample.jsx';
@@ -50,9 +49,7 @@ function App() {
       <FormHandlingExample />
       <hr />
 
-      <h2>Effects</h2>
-      <UseEffectExample />
-      <hr />
+    
 
       <h2>Styling Sessions</h2>
       <StylingApproachesExample />
