@@ -67,7 +67,7 @@ function Create() {
   };
 
   return (
-    <div className="app-container">
+    
       <div className="app-content">
         {/* Status Messages */}
         {error && <div className="error">❌ {error}</div>}
@@ -149,7 +149,7 @@ function Create() {
           </form>
         </div>
       </div>
-    </div>
+    
   );
 }
 
