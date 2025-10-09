@@ -4,6 +4,7 @@ import './index.css'
 import App from './App.jsx'
 import Create from './Create.jsx'
 import SelectData from './SelectData.jsx'
+import EditData from './EditData.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -12,6 +13,7 @@ createRoot(document.getElementById('root')).render(
     <div className="app-container">
       <Create />
       <SelectData />
+      {/* <EditData /> */}
     </div>
   </StrictMode>,
 )
