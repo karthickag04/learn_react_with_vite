@@ -1,2 +1,5 @@
 chat ref for new project creation
 https://chatgpt.com/share/6953729c-e168-800b-bf6b-1e6336bd14e1
+
+chat ref for useState Hook use cases with diff events
+https://chatgpt.com/share/6954b9d2-477c-800b-b664-f94ff9be9c9a
