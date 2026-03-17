@@ -12,3 +12,6 @@ https://chatgpt.com/share/69414d0d-cf1c-800b-828a-9eed8974a79d
 
 .md file usage for readme.md
 https://chatgpt.com/share/69414d46-1928-800b-a591-b5edbc254c4f
+
+react + node + mongodb project creation with only registeration
+https://chatgpt.com/share/69b8fa48-0158-800b-bdab-f08bf7f587eb
