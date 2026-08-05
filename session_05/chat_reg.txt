@@ -15,3 +15,6 @@ https://chatgpt.com/share/69414d46-1928-800b-a591-b5edbc254c4f
 
 react + node + mongodb project creation with only registeration
 https://chatgpt.com/share/69b8fa48-0158-800b-bdab-f08bf7f587eb
+
+Router access
+https://chatgpt.com/share/6a733bed-fb9c-83ee-b9fa-69bd22ce81d7
