@@ -6,6 +6,8 @@ const User = require("../models/User");
 // registration API
 router.post("/register", async(req,res)=>{
 
+    console.log("BODY:", req.body);
+
     try{
 
         const {name,email,password,role} = req.body;
@@ -31,5 +33,59 @@ router.post("/register", async(req,res)=>{
     }
 
 });
+
+
+
+
+
+
+// ==========================
+// LOGIN USER
+// ==========================
+router.post("/login", async (req, res) => {
+
+    try {
+
+        const { email, password } = req.body;
+
+        // Find user using email
+        const user = await User.findOne({ email: email });
+
+        // User does not exist
+        if (!user) {
+            return res.status(401).json({
+                message: "Invalid email or password"
+            });
+        }
+
+        // Check password
+        if (user.password !== password) {
+            return res.status(401).json({
+                message: "Invalid email or password"
+            });
+        }
+
+        // Login successful
+        res.json({
+            message: "Login Successful",
+            user: {
+                id: user._id,
+                name: user.name,
+                email: user.email,
+                role: user.role
+            }
+        });
+
+    }
+    catch (error) {
+
+        res.status(500).json({
+            error: error.message
+        });
+
+    }
+
+});
+
 
 module.exports = router;
