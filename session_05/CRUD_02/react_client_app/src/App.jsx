@@ -2,6 +2,7 @@
 import './App.css'
 import Register from './Register'
 import Login from './Login'
+import UserList from './UserList'
 
 function App() {
   
@@ -10,6 +11,10 @@ function App() {
 <>
       <Register/>
        <Login />
+
+       <UserList />
+
+
 
     </>
   )

@@ -3,6 +3,32 @@ const router = express.Router();
 const User = require("../models/User");
 
 
+// ==========================
+// GET ALL USERS
+// ==========================
+router.get("/", async (req, res) => {
+
+    try {
+
+        const users = await User.find();
+
+        res.json({
+            message: "Users fetched successfully",
+            users: users
+        });
+
+    }
+    catch (error) {
+
+        res.status(500).json({
+            error: error.message
+        });
+
+    }
+
+});
+
+
 // registration API
 router.post("/register", async(req,res)=>{
 
