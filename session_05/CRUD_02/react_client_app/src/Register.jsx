@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 
-function Register(){
+function Register({ onRegisterSuccess }){
 
 const [user,setUser] = useState({
     name:"",
@@ -28,6 +28,9 @@ const handleSubmit = async(e)=>{
         );
 
         alert(res.data.message);
+        if (onRegisterSuccess) {
+            onRegisterSuccess();
+        }
 
     }
     catch(error){

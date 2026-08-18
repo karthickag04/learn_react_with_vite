@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 
-function Login() {
+function Login({ onLoginSuccess }) {
 
     const [loginData, setLoginData] = useState({
         email: "",
@@ -32,6 +32,10 @@ function Login() {
             console.log(response.data);
 
             alert(response.data.message);
+
+            if (onLoginSuccess && response.data.user) {
+                onLoginSuccess(response.data.user);
+            }
 
         }
         catch (error) {
