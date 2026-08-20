@@ -40,6 +40,34 @@ function UserList() {
     };
 
 
+
+    // Delete user by ID
+    const handleDelete = async (id) => {
+
+        try {
+
+            const response = await axios.delete(
+                `http://localhost:5000/api/users/${id}`
+            );
+
+            console.log(response.data);
+
+            // Remove deleted user from UI
+            setUsers(users.filter((user) => user._id !== id));
+
+        }
+        catch (error) {
+
+            console.log(error);
+
+            alert("Unable to delete user");
+
+        }
+
+    };
+
+
+
     // Call API when page loads
     useEffect(() => {
 
@@ -113,6 +141,16 @@ function UserList() {
 
                                 <td>
                                     {user.role}
+                                </td>
+                                <td>
+                                    Edit
+                                </td>
+                                <td>
+                                   <button
+                                        onClick={() => handleDelete(user._id)}
+                                    >
+                                        Delete
+                                    </button>
                                 </td>
 
                             </tr>
