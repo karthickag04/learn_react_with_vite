@@ -156,4 +156,54 @@ router.delete("/:id", async (req, res) => {
 });
 
 
+
+
+// ==========================
+// UPDATE USER BY ID
+// ==========================
+router.put("/:id", async (req, res) => {
+
+    try {
+
+        const { id } = req.params;
+
+        const { name, email, password, role } = req.body;
+
+        const updatedUser = await User.findByIdAndUpdate(
+            id,
+            {
+                name,
+                email,
+                password,
+                role
+            },
+            {
+                new: true,
+                runValidators: true
+            }
+        );
+
+        if (!updatedUser) {
+            return res.status(404).json({
+                message: "User not found"
+            });
+        }
+
+        res.json({
+            message: "User updated successfully",
+            user: updatedUser
+        });
+
+    }
+    catch (error) {
+
+        res.status(500).json({
+            error: error.message
+        });
+
+    }
+
+});
+
+
 module.exports = router;

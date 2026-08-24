@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
+import EditUser from "./EditUser";
+
+
 function UserList() {
 
     const [users, setUsers] = useState([]);
@@ -8,6 +11,8 @@ function UserList() {
     const [loading, setLoading] = useState(true);
 
     const [error, setError] = useState("");
+
+     const [editUserId, setEditUserId] = useState(null);
 
 
     // Get all users
@@ -63,12 +68,12 @@ function UserList() {
             alert("Unable to delete user");
 
         }
-
-    };
-
+    }
 
 
-    // Call API when page loads
+
+
+ // Page load
     useEffect(() => {
 
         getUsers();
@@ -88,6 +93,37 @@ function UserList() {
         return <h3>{error}</h3>;
 
     }
+
+
+    // Show EditUser component
+    if (editUserId) {
+
+        return (
+
+            <EditUser
+                userId={editUserId}
+
+                onUpdate={() => {
+                    setEditUserId(null);
+                    getUsers();
+                }}
+
+                onCancel={() => {
+                    setEditUserId(null);
+                }}
+            />
+
+        );
+
+    }
+
+
+
+
+
+
+
+
 
 
     return (
@@ -143,7 +179,13 @@ function UserList() {
                                     {user.role}
                                 </td>
                                 <td>
-                                    Edit
+                                   <button
+                                        onClick={() =>
+                                            setEditUserId(user._id)
+                                        }
+                                    >
+                                        Edit
+                                    </button>
                                 </td>
                                 <td>
                                    <button
