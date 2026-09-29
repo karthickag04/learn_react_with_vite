@@ -10,3 +10,6 @@ https://chatgpt.com/share/6a47b99b-3074-83ee-8d31-379d66570d79
 
 debug chat ref
 https://chatgpt.com/share/6a9ac8a3-c908-83ee-b86f-758e00a7d017
+
+chat ref on JWT, Session, Etc
+https://chatgpt.com/share/6abb9444-55b8-83ee-a088-58f7cf414720
